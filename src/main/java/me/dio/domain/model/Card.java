@@ -11,8 +11,8 @@ public class Card {
     private Long id;
     @Column(unique = true)
     private String number;
-    @Column(name = "available_limit",scale = 13, precision = 2) //Scale -> quantidades de numeros que gostaria,
-    // precision é decimal 11 inteiros 2 decimais, mudando nome pois alguns banco de dados a palavra limit é reservada
+    @Column(name = "available_limit",precision = 13, scale = 2) //Scale -> precision é decimal, precision é quantidades
+    // de numeros que gostaria, mudando nome pois alguns banco de dados a palavra limit é reservada
     private BigDecimal limit;
 
     public Long getId() {
